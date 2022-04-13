@@ -16,18 +16,21 @@ function Login(){
                             <p onClick={register}>Register</p>
                             <hr id="indicator"></hr>
                         </div>
-                        <form id="LoginForm">
-                            <input type="text" placeholder="username"></input>
-                            <input type="password" placeholder="password"></input>
-                            <button type="submit" className="button">Login</button>
-                            <a href="#">Forgot password?</a>
-                        </form>
-                        <form id="RegForm">
-                            <input type="text" placeholder="username"></input>
-                            <input type="email" placeholder="email"></input>
-                            <input type="password" placeholder="password"></input>
-                           <button type="submit" className="button">Register</button>
-                        </form>
+                        <div className="content">
+                            <form id="LoginForm">
+                                <input type="text" placeholder="username"></input>
+                                <input type="password" placeholder="password"></input>
+                                <button type="submit" className="button">Login</button>
+                                <a href="#">Forgot password?</a>
+                            </form>
+
+                            <form id="RegForm">
+                                <input type="text" placeholder="username"></input>
+                                <input type="email" placeholder="email"></input>
+                                <input type="password" placeholder="password"></input>
+                            <button type="submit" className="button">Register</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
