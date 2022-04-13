@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-Commerce</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                --f-color: rgba(255, 255, 255, 0.904);
+                --b-color: rgba(255, 255, 255, 0.904);
+                --br-width:1px;
+                --br-color:rgb(236, 222, 222);
+            }
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+            .Container{
+                width:400px;
+                height:400px;
+                perspective:100em; 
+                margin:70px auto;
+                /* background-color:#101010; */
+                display:grid;
+                place-items:center;
+                
+                /* border:3px solid; */
+            }
+            .cube{
+                width:290px;
+                height:290px;
+                position:relative;
+               
+                transform-style: preserve-3d;
+                transform: rotateX(45deg)  rotateZ(45deg);
+                animation-name:rot;
+                /* animation:none; */
+                animation-duration:12s;
+                animation-timing-function:linear;
+                animation-iteration-count:infinite; 
+                /* background-color: blue; */ 
+            }
+            @keyframes rot {
+                from
+                {
+                    transform: rotate3d(0,0,0,0)
+                }
+    
+                to
+                {
+                    transform: rotate3d(0,1,0,360deg);
+                }
+            }
+            .t{
+                width: 290px;
+                height:290px;
+                position: absolute;
+                
+                
+            }
+            .t h3{
+                color:red;
+            }
+            .t h5{
+                color:red;
+            }
+            .front{
+                transform:rotateX(0) translateZ(145px);
+                background-color: var(--f-color);
+                border:var(--br-width) solid var(--br-color);
+                display:grid;
+                place-items:center;       
+            }
+            .top{
+                transform:rotateX(90deg) translateZ(145px);
+                background-color: var(--f-color);
+                border:var(--br-width) solid var(--br-color);
+            }
+            
+            .left{
+                transform:rotateY(-90deg) translateZ(145px);
+                background-color: var(--b-color);
+                border:var(--br-width) solid var(--br-color);
+                display:grid;
+                place-items:center;
+            }
+            .back{
+                transform:rotateX(0) translateZ(-145px);
+                background-color: var(--f-color);
+                border:2px solid var(--br-color);
+                display:grid;
+                place-items:center;
+            }
+    
+            .bottom{
+                transform:rotateX(-90deg) translateZ(145px);
+                background-color:var(--b-color);
+                border:2px solid var(--br-color);
+    
+            }
+            
+            .right{
+                transform:rotateY(90deg) translateZ(145px);
+                background-color: var(--b-color);
+                border:2px solid var(--br-color);
+                display:grid;
+                place-items:center;
+            }
+            .mirror{  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0); -moz-transform: matrix(-1, 0, 0, 1, 0, 0); -o-transform: matrix(-1, 0, 0, 1, 0, 0); transform: matrix(-1, 0, 0, 1, 0, 0); }
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                         <img src="logo-1.png" width="200px" style="border-radius: 15px;">
+                    </div>
+                    <nav>
+                        <ul>
+                           <li><a href="">Home</a></li>
+                           <li><a href="">About</a></li> 
+                           <li><a href="">Products</a></li>    
+                           <li><a href="">Contact</a></li>    
+                           <li><a href="">Account</a></li>
+                           <li><a href=""><img src="https://img.icons8.com/color/24/000000/shopping-cart--v2.png" width="30px" height="30px"/></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row">
+                   <div class="col-2">
+                       <h1>
+                           Give Your Workout<br>A New Style!
+                       </h1>
+                       <p>
+                           "Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                       </p>
+                       <a href="" class="btn">Explore Now &#8594;</a>
+       
+                   </div>
+                   <div class="col-2">
+                       <img src="image1.png" alt="image">
+                   </div>
+                </div>
+             </div>
+        </div>
+       
+        <!----- featured categories------->
+
+        <div class="categiories">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="category-1.jpg" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="category-2.jpg" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="category-3.jpg" alt="">
+                    </div>    
+                </div>
+            </div>
+        </div>
+            <!----- featured products------->
+        <div class="featured-container">
+            <div class="title"><h2>Featured Products</h2></div>
+            <div class="Container">
+                <div class="cube">
+                    <div class="t front">
+                        <img src="product-1.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        
+                            <h3>Red printed T shirt
+                            </h3>
+                            <h5>$50.00</h5>
+                            <a href=""  class="cart">Add to Cart &#8594;</a>
+                       
+                    </div>
+                    <div class="t top"></div>
+                    <div class="t left">
+                        <img src="product-2.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>HRX Black Shoes
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t back">
+                        <img src="product-3.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3 class="mirror">Grey Benetton Trousers
+                        </h3>
+                        <h5 class="mirror">$50.00</h5>
+                        <a href=""  class="cart mirror">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t bottom"></div>
+                    <div class="t right">
+                        <img src="product-4.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>Puma T-Shirt
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Container">
+                <div class="cube">
+                    <div class="t front">
+                        <img src="product-9.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>Analog Roadster Clock
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t top"></div>
+                    <div class="t left">
+                        <img src="product-10.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>HRX Sports Shoes
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t back ">
+                        <img src="product-11.jpg"width="100%" height="220px"style="border-radius: 5px;"  alt="random">
+                        <h3 class="mirror">Roadster Canvas Shoes
+                        </h3>
+                        <h5 class="mirror">$50.00</h5>
+                        <a href=""  class="cart mirror">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t bottom"></div>
+                    <div class="t right">
+                        <img src="product-12.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>Nike Trousers
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Container">
+                <div class="cube">
+                    <div class="t front">
+                        <img src="product-5.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>HRX Grey Shoes
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t top"></div>
+                    <div class="t left">
+                        <img src="product-6.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>Puma Black T shirt
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t back ">
+                        <img src="product-7.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3 class="mirror">HRX Socks
+                        </h3>
+                        <h5 class="mirror">$50.00</h5>
+                        <a href=""  class="cart mirror">Add to Cart &#8594;</a>
+                    </div>
+                    <div class="t bottom"></div>
+                    <div class="t right">
+                        <img src="product-8.jpg" width="100%" height="220px" style="border-radius: 5px;"  alt="random">
+                        <h3>Black Analog Fossil Watch
+                        </h3>
+                        <h5>$50.00</h5>
+                        <a href=""  class="cart">Add to Cart &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--offer products-->
+        
+        <div class="offer-container" >
+            <div class="offer" ><h2 style="justify-content:center">Offer Products</h2></div>
+            <div>
+                <img src="exclusive.png" width="600px" alt="">
+            </div>
+        </div>
+
+
+        <footer>
+            <div>
+                <p style="text-align: center" style="box-sizing: content-box">All rights reserved</p>
+            </div>
+           <div></div>
+           <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </footer>
+    </body>
+</html>
