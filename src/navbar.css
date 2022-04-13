@@ -1,5 +1,38 @@
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+.position{
+    position:relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 4rem;
+    padding-inline: 1rem;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color:rgb(36,41,47);
+}
+
+.navlist{
+    display: flex;
+    list-style: none;
+    margin-left:auto;
+
+}
+
+.navlist>li{
+    padding-inline:1rem;
+    color: white;
+}
+.navlist>li:hover{
+    color: blueviolet;
+}
+
