@@ -20,7 +20,7 @@ function Login(){
                             <input type="text" placeholder="username"></input>
                             <input type="password" placeholder="password"></input>
                             <button type="submit" className="button">Login</button>
-                            <a href="#">Forgot password</a>
+                            <a href="#">Forgot password?</a>
                         </form>
                         <form id="RegForm">
                             <input type="text" placeholder="username"></input>
