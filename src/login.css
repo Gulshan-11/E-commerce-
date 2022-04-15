@@ -19,16 +19,16 @@
 }
 
 .form-con{
-    background: rgb(144, 213, 250);
+    background:white;
     width: 300px;
     height: 400px;
     position:relative;
-    /* float: right; */
     text-align: center;
     overflow: hidden;
     padding: 15px 0 ;
     margin: 100px 200px 0 0;
-    box-shadow: 0 0 20px 0 rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px 2px rgb(180, 172, 172);
+    border-radius: 1rem;
 }
 
 .form-con p{
@@ -91,7 +91,7 @@ form a{
 }
 
 #indicator{
-    width: 80px;
+    width: 100px;
     border: none;
     background-color: #ff523b;
     height: 3px;
