@@ -1,13 +1,13 @@
-// import logo from './logo.svg';
-import './App.css';
-// import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import NavBar from './components/navbar';
+import React from 'react';
+import { BrowserRouter} from 'react-router-dom';
+import Navigate from './components/navigate';
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-    </div>
+      <BrowserRouter>
+      <NavBar/>
+      <Navigate/>
+      </BrowserRouter>
   );
 }
-
-export default App;

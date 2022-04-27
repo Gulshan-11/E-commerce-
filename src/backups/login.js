@@ -1,6 +1,4 @@
 import background from "./RedStore_Img/image1.png";
-import "./login.css"
-
 
 function Login(){
     return(

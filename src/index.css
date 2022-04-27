@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* ::-webkit-scrollbar{
+    width: 0;
+} */
+.navbar{
+    background-color:rgba(255,255,255,0.7);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 0 2px 0 rgb(189, 183, 183);
+    height: 4rem;
+    transition: 2s;
+}
+.headlinktitle{
+    color: black;
+}
+.headlinkwrapper{
+    flex-grow: 1;
+    text-decoration: none;
+}
+.navlist{
+    display: flex;
+    gap: 1.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navlist > .link {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1;
 }
+
+
+@media  screen and (max-width:500px){
+    .navlist{
+        display: none;
+    }
+    
+}
+
+.home-section1{
+    height: 100vh;
+    background: url(./images/v748-toon-103.jpg);
+    background-size: cover;
+}
+
+.home-section2{
+    height: 100vh;
+}
+
+/* login-section */
+
+.login-section{
+    height: 90vh;
+    position: relative;
+    top:4rem; 
+    display: flex;
+    margin-inline: 4rem;
+    overflow: hidden;
+}
+.login-form{
+    flex-grow: 1;
+}
+.login-btn{
+    border-style: none;
+    border-radius: 15px;
+    color:white;
+    background-color: black;
+    padding: 8px 22px;
+    font-weight: 700;
+    letter-spacing: 1.2;
+    width: 100px;
+}
+.login-side-img{
+    background: url('./images/blob.png');
+}
+.login-form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black ;
+}
+form{
+    width: 50%;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    display: grid;
+    place-items: center;
+
+}
+form div{
+    display: flex;
+    flex-direction: column;
+}
+.login-form  div{
+    margin-bottom: 3rem;
+}
+input:focus{
+    outline: none;
+}
+input{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border:2px solid grey;
+    padding-left: 0.5rem;
+}
+
+
